@@ -1,0 +1,334 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'montserrat';
+    color:#fff;
+}
+html,body{
+    height:100%;
+    perspective: 800px;
+    width:100%;
+
+}
+#cursor{
+    height: 20px;
+    width:20px;
+    background-color: rgb(216, 145, 169);
+    border-radius: 50%;
+    position:fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 500px;
+    width:500px;
+    background-color: rgba(216, 112, 147, 0.548);
+    border-radius: 50%;
+    position:fixed;
+    filter:blur(40px);
+    z-index: 9;
+   
+}
+#nav{
+    height: 130px;
+    width:100%;
+    
+    display:flex;
+    align-items: center;
+    padding:0 150px;
+    gap:50px;
+    position:fixed;
+    justify-content: flex-start;
+    z-index: 99;
+}
+#nav img{
+    height:75px;
+
+}
+video{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    position:fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+}
+#page1{
+    height: 100vh;
+    width:100%;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    position:relative;
+}
+#page1 h1::before {
+    content: "UNILINK";
+    position: absolute;
+    color: black;
+    top:-4px;
+    left:-4px;
+    -webkit-text-stroke: 1px rgba(216, 112, 147, 0.288);
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 22px;
+    font-weight: 500;
+    width: 40%;
+}
+#page2{
+     min-height:100vh;
+     width:100%;
+     z-index: 10;
+}
+#scroller{
+    
+    white-space: nowrap;
+    overflow-x:auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+#scroller::-webkit-scrollbar{
+    display:none;
+}
+
+#scroller1{
+    display:inline-block;
+    white-space: nowrap;
+    animation-name: scroll ;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller h4{
+    display:inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    transition:all linear 0.5s ;
+    color:transparent;
+    -webkit-text-stroke: 2px pink ;
+}
+#scroller h4:hover{
+    color:palevioletred;
+}
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+#about-us{
+    height:40vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+#about-us-in{
+    width: 50%;
+    text-align: center;
+}
+#about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    -webkit-text-fill-color: whitesmoke;
+}
+#about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+#cards1{
+    
+    height:60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position:relative;
+    z-index:10;
+}
+.card{
+    height:80%;
+    width:24%;
+    background-color: blue;
+    border-radius: 20px;
+    background-size: cover;
+    overflow: hidden;
+    background-position:center ;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image: url(https://cdn.prod.website-files.com/5f7ece8a7da656e8a25402bc/631f32ee984371cb97df4ce2_How%20to%20take%20notes%20from%20a%20textbook.png);
+}
+#card2{
+    background-image: url(https://www.3playmedia.com/wp-content/uploads/2022/04/8-podcasts-header.jpg);  
+}
+#card3{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbfOMtWiIRdD2PWrll_JZNNwdG-Q0_eji-YEsZWDeMN-IRLy2P7GmuLzXhTnXp_Gaqau0&usqp=CAU);
+}
+a{
+    text-decoration: none;
+}
+#new{
+    height:40vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+#new-in{
+    font-size: 20px;
+    line-height: 26px;
+}
+#new-in h3{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    -webkit-text-fill-color: whitesmoke;
+}
+#new-in p{
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    justify-content: space-around;
+}
+#cards2{
+    
+    height:60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position:relative;
+    z-index:10;
+}
+#card4{
+    background-image: url(https://media.licdn.com/dms/image/D560BAQE_EJF5vGcLFg/company-logo_200_200/0/1710184746382?e=2147483647&v=beta&t=NnfuQq2pw4TuA4Ugpl_ogl2PeakeMC2xebI064aOuxI);
+}
+#card5{
+    background-image: url(https://media.licdn.com/dms/image/C4E03AQEc6aijLvH4TA/profile-displayphoto-shrink_200_200/0/1642587387006?e=2147483647&v=beta&t=Y9NYeqwSfIRrNBFqfMrs2WqUjRH7pstdCMgAl2fCIBk);
+}
+#card6{
+    background-image: url(https://media.licdn.com/dms/image/D4D0BAQGl3IScDuvWUA/company-logo_200_200/0/1694584843593?e=2147483647&v=beta&t=HpC1a2Ay3J4i9DA_4FkcqfZ7AAkfN9iIaUvhDgl6cBg);
+}
+#techie{
+    height:40vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+#techie-in{
+    font-size: 20px;
+    line-height: 26px;
+}
+#techie-in h3{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    -webkit-text-fill-color: whitesmoke;
+}
+#techie-in p{
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    justify-content: space-around;
+}
+#cards3{
+    height:60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position:relative;
+    z-index:10;
+}
+#card7{
+    background-image: url(https://media.licdn.com/dms/image/C4D0BAQHD0BSKDxRLUg/company-logo_200_200/0/1671790302339/hackhound_logo?e=2147483647&v=beta&t=Vx3s8xy9hmbX2z1NYoMhvUQza66naxmWH4P53jKuRsg);
+}
+#card8{
+    background-image: url(https://media.licdn.com/dms/image/C4D0BAQHa212XwpTpRw/company-logo_200_200/0/1660626687953/geeksforgeeks_logo?e=2147483647&v=beta&t=JyfNsNLk4Jh8LqRnYtGKdYGnFgUWVP3Sv_C4kHIHBk0);
+}
+#card9{
+    background-image: url(https://media.licdn.com/dms/image/C4E0BAQE2av64iuAjOQ/company-logo_200_200/0/1630639463089?e=2147483647&v=beta&t=FjIkDKKfktVTVBjkwLlpjzyFdDqbDcJlMnVku8t2Mjo);
+}
+.overlay{
+    height: 100%;
+    width:100%;
+    background-color: rgba(187, 7, 187, 0.863);
+    padding: 30px;
+    padding-top: 80px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4{
+    color:black;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.overlay p{
+    color:black;
+    font-size:18px;
+}
+.card:hover .overlay{
+    opacity:1;
+}
+.card:hover{
+    transform:rotate3d(1,1,0,20deg)
+}
+@font-face {
+    font-family: Founder;
+    src: url(FoundersGroteskCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: CardinalR;
+    src: url(cardinalfruitweb-regular.ttf);
+}
+
+@font-face {
+    font-family: Cardinali;
+    src: url(cardinalfruitweb-italic.ttf);
+}
+
+
+
+
+
+
+
+   
